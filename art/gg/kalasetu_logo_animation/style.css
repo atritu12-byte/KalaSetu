@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: #f8f3e8;
+  color: #173f35;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: #f8f3e8;
+  transition: opacity 900ms ease, visibility 900ms ease;
+}
+
+#intro.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-logo {
+  width: min(72vw, 480px);
+  max-height: 78vh;
+}
+
+.intro-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#skipIntro {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  border: 1px solid rgba(23, 63, 53, .25);
+  background: transparent;
+  color: #173f35;
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: .7;
+}
+
+#skipIntro:hover {
+  opacity: 1;
+}
+
+/* =========================
+   WEBSITE
+========================= */
+
+#site {
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 900ms ease, transform 900ms ease;
+}
+
+#site.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar {
+  height: 84px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(23, 63, 53, .08);
+}
+
+.brand {
+  display: block;
+  width: 105px;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+}
+
+.brand img {
+  width: 105px;
+  height: auto;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+/* Hide the large emblem in the navbar by cropping to the wordmark.
+   If you want the complete logo, remove overflow/height and use width:105px. */
+
+nav {
+  display: flex;
+  gap: 34px;
+}
+
+nav a {
+  color: #173f35;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.hero {
+  min-height: calc(100vh - 84px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+  color: #bd5b2b;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.hero-copy {
+  max-width: 600px;
+  margin-top: 24px;
+  line-height: 1.7;
+  color: #765b42;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .intro-logo {
+    width: min(88vw, 430px);
+  }
+}

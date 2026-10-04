@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <!-- Background -->
+  <rect width="400" height="500" fill="#f5ede3"/>
+  
+  <!-- Main icon group -->
+  <g transform="translate(200, 150)">
+    <!-- Flowers at top (rust/orange) -->
+    <g fill="#b8652a">
+      <!-- Center flower petal -->
+      <ellipse cx="0" cy="-50" rx="15" ry="30" transform="rotate(0)"/>
+      <!-- Left petal -->
+      <ellipse cx="-35" cy="-35" rx="15" ry="30" transform="rotate(-60)"/>
+      <!-- Right petal -->
+      <ellipse cx="35" cy="-35" rx="15" ry="30" transform="rotate(60)"/>
+    </g>
+    
+    <!-- Arch (dark green) -->
+    <path d="M -80 -20 Q -80 -100 0 -100 Q 80 -100 80 -20" 
+          stroke="#1a4d3e" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Left column (dark green) -->
+    <rect x="-75" y="-15" width="20" height="140" fill="#1a4d3e" rx="3"/>
+    <!-- Left column top cap -->
+    <ellipse cx="-65" cy="-20" rx="12" ry="8" fill="#1a4d3e"/>
+    <!-- Left column bottom cap -->
+    <ellipse cx="-65" cy="120" rx="12" ry="6" fill="#1a4d3e"/>
+    
+    <!-- Right column (dark green) -->
+    <rect x="55" y="-15" width="20" height="140" fill="#1a4d3e" rx="3"/>
+    <!-- Right column top cap -->
+    <ellipse cx="65" cy="-20" rx="12" ry="8" fill="#1a4d3e"/>
+    <!-- Right column bottom cap -->
+    <ellipse cx="65" cy="120" rx="12" ry="6" fill="#1a4d3e"/>
+    
+    <!-- Pottery vessel (rust/orange) -->
+    <g fill="#b8652a">
+      <!-- Vessel top rim -->
+      <ellipse cx="0" cy="-5" rx="35" ry="12"/>
+      <!-- Vessel body -->
+      <path d="M -35 -5 Q -40 20 -35 50 Q -20 65 0 68 Q 20 65 35 50 Q 40 20 35 -5" fill="#b8652a"/>
+      <!-- Vessel opening -->
+      <ellipse cx="0" cy="-8" rx="28" ry="10" fill="#f5ede3"/>
+    </g>
+    
+    <!-- Decorative wavy line on vessel (rust/orange) -->
+    <path d="M -28 25 Q -20 20 -10 25 Q 0 30 10 25 Q 20 20 28 25" 
+          stroke="#b8652a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Left hand/leaf (dark green) -->
+    <g fill="#1a4d3e">
+      <path d="M -50 65 Q -70 70 -75 90" stroke="#1a4d3e" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-72" cy="92" rx="8" ry="14" transform="rotate(-30)"/>
+    </g>
+    
+    <!-- Right hand/leaf (rust/orange) -->
+    <g fill="#b8652a">
+      <path d="M 50 65 Q 70 70 75 90" stroke="#b8652a" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <ellipse cx="72" cy="92" rx="8" ry="14" transform="rotate(30)"/>
+    </g>
+  </g>
+  
+  <!-- Text: Kalasetu -->
+  <text x="200" y="420" font-family="Georgia, serif" font-size="64" font-weight="600" text-anchor="middle" fill="#1a4d3e" letter-spacing="2">Kalasetu</text>
+</svg>

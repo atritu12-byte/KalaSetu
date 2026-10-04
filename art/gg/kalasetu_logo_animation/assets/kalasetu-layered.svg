@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Kalasetu animated logo</title>
+  <desc id="desc">A cultural bridge framing a terracotta pottery vessel, a flowing path and lotus leaves above the Kalasetu wordmark.</desc>
+
+  <defs>
+    <style>
+      .green { fill:#173f35; }
+      .terracotta { fill:#bd5b2b; }
+      .cream { fill:#f8f3e8; }
+      .gold { fill:#c9822d; }
+
+      /* Initial hidden states */
+      #bridge, #pot, #road, #leaves, #wordmark {
+        opacity:0;
+      }
+
+      /* Bridge: soft scale/fade */
+      #bridge {
+        transform-box: fill-box;
+        transform-origin:center;
+        animation: bridgeIn .8s cubic-bezier(.2,.8,.2,1) .1s forwards;
+      }
+
+      /* Pot */
+      #pot {
+        transform-box: fill-box;
+        transform-origin:center;
+        animation: potIn .75s cubic-bezier(.2,.8,.2,1) .8s forwards;
+      }
+
+      /* Road */
+      #road {
+        transform-box: fill-box;
+        transform-origin:center bottom;
+        animation: roadIn .85s cubic-bezier(.2,.8,.2,1) 1.5s forwards;
+      }
+
+      /* Leaves */
+      #leaves {
+        transform-box: fill-box;
+        transform-origin:center bottom;
+        animation: leavesIn .75s cubic-bezier(.2,.8,.2,1) 2.2s forwards;
+      }
+
+      /* Name */
+      #wordmark {
+        transform-box: fill-box;
+        transform-origin:center;
+        animation: wordIn .9s cubic-bezier(.2,.8,.2,1) 2.9s forwards;
+      }
+
+      @keyframes bridgeIn {
+        from { opacity:0; transform:scale(.82); }
+        to   { opacity:1; transform:scale(1); }
+      }
+
+      @keyframes potIn {
+        from { opacity:0; transform:translateY(22px) scale(.82); }
+        to   { opacity:1; transform:translateY(0) scale(1); }
+      }
+
+      @keyframes roadIn {
+        from { opacity:0; transform:scaleY(0); }
+        to   { opacity:1; transform:scaleY(1); }
+      }
+
+      @keyframes leavesIn {
+        from { opacity:0; transform:translateY(15px) scale(.45) rotate(-7deg); }
+        to   { opacity:1; transform:translateY(0) scale(1) rotate(0); }
+      }
+
+      @keyframes wordIn {
+        from { opacity:0; transform:translateY(28px); }
+        to   { opacity:1; transform:translateY(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #bridge, #pot, #road, #leaves, #wordmark {
+          animation:none !important;
+          opacity:1 !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- BRIDGE -->
+  <g id="bridge" class="green">
+    <path d="M155 286 C155 188 228 122 300 122 C372 122 445 188 445 286
+             L405 286 C405 211 356 169 300 169 C244 169 195 211 195 286 Z"/>
+    <path d="M150 292 L204 292 L204 455 C204 475 192 492 168 501
+             L150 507 Z"/>
+    <path d="M396 292 L450 292 L450 507 L432 501
+             C408 492 396 475 396 455 Z"/>
+  </g>
+
+  <!-- POT -->
+  <g id="pot" class="terracotta">
+    <path d="M255 245 Q300 231 345 245 L336 261
+             Q330 269 328 281 L272 281 Q270 269 264 261 Z"/>
+    <path d="M272 281 Q300 292 328 281
+             L337 322 Q339 335 349 344
+             Q363 358 365 388
+             Q365 429 300 451
+             Q235 429 235 388
+             Q237 358 251 344
+             Q261 335 263 322 Z"/>
+    <path d="M248 326 Q300 343 352 326 L356 342
+             Q300 361 244 342 Z" fill="#f8f3e8"/>
+    <path d="M238 374 Q300 398 362 374 L362 388
+             Q300 414 238 388 Z" fill="#f8f3e8"/>
+  </g>
+
+  <!-- ROAD / PATH -->
+  <g id="road" class="gold">
+    <path d="M300 435
+             C332 447 365 459 382 478
+             C397 495 378 511 344 521
+             C304 533 263 541 222 559
+             C257 557 310 554 355 546
+             C411 536 452 515 449 491
+             C446 465 405 446 355 432 Z"/>
+  </g>
+
+  <!-- LOTUS / LEAVES -->
+  <g id="leaves" class="terracotta">
+    <path d="M300 115 C276 91 277 60 300 33 C323 60 324 91 300 115 Z"/>
+    <path d="M287 118 C256 113 235 92 233 62 C263 64 286 82 287 118 Z"/>
+    <path d="M313 118 C344 113 365 92 367 62 C337 64 314 82 313 118 Z"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <g id="wordmark" class="green">
+    <text x="300" y="625"
+          text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="86"
+          font-weight="600"
+          letter-spacing="-3">Kalasetu</text>
+  </g>
+</svg>
